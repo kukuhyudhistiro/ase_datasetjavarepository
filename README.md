@@ -1,7 +1,8 @@
 # Dataset Sibamacode (Software Metric Analysis: Base Code)
 
 ## Deskripsi
-TUGAS ASE 2 : SOFTWARE DEFECT PREDICTION
+TUGAS ASE 2 : SOFTWARE DEFECT PREDICTION.
+
 Dataset Sibamacode (**Si**mple **Ba**se **Ma**trix **Code**) berisi metrik perangkat lunak statis yang diekstraksi dari kode sumber berbasis berkas (file-level). Dataset ini bertujuan untuk mendukung penelitian empiris dalam bidang teknik perangkat lunak, khususnya untuk memprediksi kualitas kode, kompleksitas, dan kemungkinan adanya *defect*.
 
 ## Struktur Data
