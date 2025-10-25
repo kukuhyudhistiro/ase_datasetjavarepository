@@ -1,15 +1,13 @@
-# ase_datasetjavarepository
-Dataset metric software for ASE Task
 # Dataset Sibamacode (Software Metric Analysis: Base Code)
 
 ## Deskripsi
-
+TUGAS ASE 2 : SOFTWARE DEFECT PREDICTION
 Dataset Sibamacode (**Si**mple **Ba**se **Ma**trix **Code**) berisi metrik perangkat lunak statis yang diekstraksi dari kode sumber berbasis berkas (file-level). Dataset ini bertujuan untuk mendukung penelitian empiris dalam bidang teknik perangkat lunak, khususnya untuk memprediksi kualitas kode, kompleksitas, dan kemungkinan adanya *defect*.
 
 ## Struktur Data
 * **Nama File Dataset:** `dataset_sibamacode.csv`
 * **Jumlah Sampel/Baris:** 33 berkas kode.
-* **Jumlah Metrik/Kolom:** 36 metrik.
+* **Jumlah Metrik/Kolom:** 36 metrik (termasuk kolom 'defects' yang ditambahkan).
 * **Delimiter:** Titik koma (`;`).
 
 ---
@@ -79,6 +77,38 @@ Dataset ini mengadopsi kombinasi metrik perangkat lunak umum (Halstead, LOC, dan
 | **`iv`** | Instance Variables | Jumlah total variabel *instance*. |
 
 ---
+
+## Statistik Dataset Kunci
+
+Bagian ini menyajikan statistik deskriptif untuk metrik utama, memberikan wawasan cepat tentang rentang dan distribusi data.
+
+### Statistik Deskriptif Metrik Utama
+
+| Statistik | Code Lines | Sum Cyclomatic Complexity | Max Cyclomatic Complexity | Max Nesting |
+|:---|---:|---:|---:|---:|
+| **count** | 33 | 33 | 33 | 33 |
+| **mean** | 190.64 | 22.64 | 6.24 | 1.82 |
+| **std** | 161.75 | 18.64 | 4.21 | 1.31 |
+| **min** | 16 | 0 | 0 | 0 |
+| **25% (Q1)** | 67 | 9 | 2 | 1 |
+| **50% (Median)** | 131 | 20 | 7 | 2 |
+| **75% (Q3)** | 306 | 38 | 10 | 3 |
+| **max** | 604 | 68 | 11 | 4 |
+
+### Distribusi Nilai Kolom 'Defects (True/False)'
+
+| Nilai | Jumlah File | Persentase |
+|:---|---:|---:|
+| **True** | 32 | 96.97% |
+| **False** | 1 | 3.03% |
+
+---
+
+## Penggunaan
+Dataset ini dapat digunakan untuk berbagai tugas klasifikasi dalam Machine Learning, seperti:
+1.  **Prediksi *Defect*:** Mengklasifikasikan berkas kode ke dalam kategori *defects* (True/False) berdasarkan metrik perangkat lunak.
+2.  **Analisis Kompleksitas:** Mengidentifikasi metrik mana yang paling berkorelasi dengan tingginya Cyclomatic Complexity atau tingkat *nesting* (*mn*).
+3.  **Evaluasi Desain:** Menganalisis bagaimana metrik OO berkorelasi dengan metrik LOC dan Complexity.
 
 ## Atribusi dan Lisensi
 
