@@ -107,9 +107,27 @@ Bagian ini menyajikan statistik deskriptif untuk metrik utama, memberikan wawasa
 
 ## Penggunaan
 Dataset ini dapat digunakan untuk berbagai tugas klasifikasi dalam Machine Learning, seperti:
-1.  **Prediksi *Defect*:** Mengklasifikasikan berkas kode ke dalam kategori *defects* (True/False) berdasarkan metrik perangkat lunak.
-2.  **Analisis Kompleksitas:** Mengidentifikasi metrik mana yang paling berkorelasi dengan tingginya Cyclomatic Complexity atau tingkat *nesting* (*mn*).
-3.  **Evaluasi Desain:** Menganalisis bagaimana metrik OO berkorelasi dengan metrik LOC dan Complexity.
+1. **Prediksi *Defect*:** Mengklasifikasikan berkas kode ke dalam kategori *defects* (True/False) berdasarkan metrik perangkat lunak.
+2. **Analisis Kompleksitas:** Mengidentifikasi metrik mana yang paling berkorelasi dengan tingginya Cyclomatic Complexity atau tingkat *nesting* (*mn*).
+3. **Evaluasi Desain:** Menganalisis bagaimana metrik OO berkorelasi dengan metrik LOC dan Complexity.
+
+## Kesimpulan
+
+Eksperimen menggunakan dataset Sibamacode menunjukkan bahwa algoritma *machine learning*, khususnya Random Forest dengan teknik SMOTE untuk menangani ketidakseimbangan data, sangat efektif dalam memprediksi cacat perangkat lunak berdasarkan metrik kode statis. Random Forest unggul dalam metrik *Recall* dan *F1-Score*, menjadikannya pilihan terbaik untuk mendeteksi modul kode yang berpotensi cacat, sehingga mengurangi risiko *bug* kritis lolos ke tahap produksi.
+
+Analisis *feature importance* dari Random Forest mengungkapkan bahwa metrik seperti *Sum Cyclomatic Complexity* (`scc`), *Max Cyclomatic Complexity* (`mcc`), *Executable Code Lines* (`ecl`), dan *Code Lines* (`cl`) memiliki pengaruh signifikan terhadap prediksi cacat. Hal ini menunjukkan bahwa kompleksitas dan ukuran modul kode merupakan faktor utama penyebab cacat.
+
+Berikut adalah visualisasi *feature importance* dari model Random Forest:
+
+![Feature Importance](feature_importance.png)
+
+Selain itu, *Confusion Matrix* dari model Random Forest menunjukkan kemampuan model dalam mendeteksi kelas *Defect* (True) dengan lebih baik dibandingkan Regresi Logistik, terutama dalam meminimalkan *False Negatives*:
+
+![Confusion Matrix](confusion_matrix.png)
+
+Secara praktis, temuan ini memiliki dua implikasi utama:
+1. **Prioritas Pengujian**: Model ini dapat digunakan dalam alur kerja *Quality Assurance* (QA) untuk memprioritaskan pengujian pada modul kode yang diprediksi berisiko tinggi (*Defect*=True).
+2. **Panduan Kualitas Kode**: Hasil analisis *feature importance* mendorong praktik *refactoring* untuk menyederhanakan modul kode yang terlalu kompleks dan menetapkan batas atas untuk metrik seperti `scc` selama *code review*.
 
 ## Atribusi dan Lisensi
 
