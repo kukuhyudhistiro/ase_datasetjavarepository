@@ -100,8 +100,8 @@ Bagian ini menyajikan statistik deskriptif untuk metrik utama, memberikan wawasa
 
 | Nilai | Jumlah File | Persentase |
 |:---|---:|---:|
-| **True** | 32 | 96.97% |
-| **False** | 1 | 3.03% |
+| **True** | 16 | 49.4% |
+| **False** | 17 | 50.6% |
 
 ---
 
@@ -123,11 +123,9 @@ Berikut adalah visualisasi *feature importance* dari model Random Forest:
 
 Selain itu, *Confusion Matrix* dari model Random Forest menunjukkan kemampuan model dalam mendeteksi kelas *Defect* (True) dengan lebih baik dibandingkan Regresi Logistik, terutama dalam meminimalkan *False Negatives*:
 
-![Confusion Matrix](confusion_matrix.png)
 <img width="358" height="269" alt="image" src="https://github.com/user-attachments/assets/deb4323e-2d01-477c-83fe-19bf6d029aab" />
 
 <img width="343" height="264" alt="image" src="https://github.com/user-attachments/assets/0fc34a0f-0d36-4985-994b-436cee0249b5" />
-
 
 Secara praktis, temuan ini memiliki dua implikasi utama:
 1. **Prioritas Pengujian**: Model ini dapat digunakan dalam alur kerja *Quality Assurance* (QA) untuk memprioritaskan pengujian pada modul kode yang diprediksi berisiko tinggi (*Defect*=True).
