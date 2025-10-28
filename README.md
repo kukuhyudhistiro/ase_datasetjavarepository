@@ -118,8 +118,7 @@ Eksperimen menggunakan dataset Sibamacode menunjukkan bahwa algoritma *machine l
 Analisis *feature importance* dari Random Forest mengungkapkan bahwa metrik seperti *Sum Cyclomatic Complexity* (`scc`), *Max Cyclomatic Complexity* (`mcc`), *Executable Code Lines* (`ecl`), dan *Code Lines* (`cl`) memiliki pengaruh signifikan terhadap prediksi cacat. Hal ini menunjukkan bahwa kompleksitas dan ukuran modul kode merupakan faktor utama penyebab cacat.
 
 Berikut adalah visualisasi *feature importance* dari model Random Forest:
-
-![Feature Importance](feature_importance.png)
+<img width="386" height="306" alt="image" src="https://github.com/user-attachments/assets/3e1f2a7e-200c-4ce5-9482-9ee9fc2df1aa" />
 
 Selain itu, *Confusion Matrix* dari model Random Forest menunjukkan kemampuan model dalam mendeteksi kelas *Defect* (True) dengan lebih baik dibandingkan Regresi Logistik, terutama dalam meminimalkan *False Negatives*:
 
